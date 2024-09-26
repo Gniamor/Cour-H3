@@ -43,7 +43,7 @@ services:
     depends_on:
       - db
     ports:
-      - "8000:8000"
+      - "8000:80"
     networks:
       - db
 

@@ -1,5 +1,7 @@
-FROM python:3.6
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
 WORKDIR /app
 COPY . .
 RUN pip install -r requirements.txt
-CMD ["python", "/app.py"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80"]
+
+
